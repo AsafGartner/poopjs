@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 0;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #595959;
+    font-size: 18px;
+    padding: 0 25px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header .right {
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+header .small_logo {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+header * {
+    vertical-align: middle;
+}
+
+header .search {
+    display: inline-block;
+    height: 30px;
+    width: 80px;
+    border-radius: 15px;
+    border: 1px solid #dbdddf;
+    box-shadow: inset 0 3px 10px #eceef0;
+    padding: 3px 7px;
+}
+
+.section {
+    box-shadow: 0 -0.25em 1.5em rgba(0,5,10,0.25);
+}
+
+.section.one {
+    box-shadow: none;
+}
+
+.section.one > .title {
+    margin: 0 auto;
+    width: 1300px;
+}
+
+.section.one > .title .big_logo {
+    display: inline-block;
+}
+
+.section.one > .title .description {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 10px;
+    width: 500px;
+}
+
+.section.one > .title .description h1 {
+    font-size: 90px;
+    margin: 0;
+}
+
+.section.one > .title .description p {
+    font-size: 30px;
+    margin: 20px 0 45px 0;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 5px;
+    height: 60px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.btn .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.btn.primary {
+    background-color: #d04;
+    color: white;
+    padding: 0 40px;
+}
+
+.bulletpoints {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 74%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.bp {
+    width: 23%;
+}
+
+.bp .title {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.bp .title.simple {
+    color: #09d;
+}
+
+.bp .title.fast {
+    color: #d04;
+}
+
+.bp .title.progressive {
+    color: #ffc400;
+}
+
+.bp .title.trusted {
+    color: #7d0;
+}
+
+.section.two {
+    background-color: #09d;
+    padding: 30px;
+}
+
+.section.two h2 {
+    color: white;
+    text-align: center;
+    font-size: 55px;
+    margin: 0;
+}
+
+.section.two p {
+    text-align: center;
+    color: #37393b;
+    font-size: 20px;
+}
+
+.section.two .content {
+    text-align: center;
+}
+
+.section.two pre {
+    margin: 0;
+    display: inline-block;
+    width: 800px;
+    height: 300px;
+    background-color: #27292b;
+    padding: 10px;
+    color: white;
+    vertical-align: top;
+    text-align: left;
+}
+
+.section.two .interactive {
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    vertical-align: top;
+    text-align: left;
+    padding: 40px;
+}
+
+.section.two .interactive .number {
+    font-size: 80px;
+    color: #09c;
+    display: block;
+}
+
+.section.two .interactive button {
+    height: 40px;
+    width: 90px;
+}
+
+.section.three {
+    padding: 30px;
+}
+.section.three h2 {
+    color: black;
+    text-align: center;
+    font-size: 55px;
+    margin: 0;
+}
+
+.section.three h2 .color {
+    color: #7d0;
+}
+
+.section.three p {
+    text-align: center;
+    color: #37393b;
+    font-size: 18px;
+}
+
+.section.three code {
+    background-color: #f2f3f6;
+    color: #d04;
+    padding: 2px;
+}
+
+.anim {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.anim > div {
+    height: 50%;
+    position: absolute;
+    width: 5px;
+    border-radius: 50%;
+}
+
+
+</style>
+</head>
+<body>
+<header>
+    <div class="small_logo">
+        <img src="poop_logo.png" width=72 height=40 />
+    </div>
+    <div class="right">
+        <a href="javascript:;">docs</a>
+        <a href="javascript:;">try online</a>
+        <a href="javascript:;">github</a>
+        <span class="search"><img src="search.png" height=20 /></span>
+    </div>
+</header>
+<div class="section one">
+    <div class="title">
+        <div class="big_logo">
+            <img src="poop_logo.png" />
+        </div>
+        <div class="description">
+            <h1>poop</h1>
+            <p>a friendly (and fast!) UI library that makes building web apps fun</p>
+            <div class="btn primary"><span class="content">Get poopin'</span></div>
+        </div>
+    </div>
+    <div class="bulletpoints">
+        <div class="bp">
+            <span class="title simple">simple.</span>
+            <span class="description">If you know HTML, CSS, and Javascript, why are you looking for a UI framework?!</span>
+        </div>
+        <div class="bp">
+            <span class="title fast">fast.</span>
+            <span class="description">Faster loads because everything is already precompiled into the browser and a tiny (~0kb gzip) runtime</span>
+        </div>
+        <div class="bp">
+            <span class="title progressive">progressive.</span>
+            <span class="description">From simple HTML to powerful UI components</span>
+        </div>
+        <div class="bp">
+            <span class="title trusted">trusted.</span>
+            <span class="description">Poop is already powering most of the web</span>
+        </div>
+    </div>
+</div>
+<div class="section two">
+    <h2>Reactive UI components</h2>
+    <p>Write a function that updates the view and it will automatically and efficiently update the resulting HTML</p>
+    <div class="content">
+        <pre>
+&lt;span class=&quot;number&quot;&gt;&lt;/span&gt;
+&lt;button&gt;Click me!&lt;/button&gt;
+&lt;script&gt;
+    var count = 0;
+    var numberContainer = document.querySelector(&quot;.section.two .interactive .number&quot;);
+    var button = document.querySelector(&quot;.section.two .interactive button&quot;);
+    numberContainer.textContent = count;
+    button.addEventListener(&quot;click&quot;, function() {
+        count++;
+        numberContainer.textContent = count;
+    });
+&lt;/script&gt;
+        </pre><div class="interactive">
+            <span class="number"></span>
+            <button>Click me!</button>
+            <script>
+                var count = 0;
+                var numberContainer = document.querySelector(".section.two .interactive .number");
+                var button = document.querySelector(".section.two .interactive button");
+                numberContainer.textContent = count;
+                button.addEventListener("click", function() {
+                    count++;
+                    numberContainer.textContent = count;
+                });
+            </script>
+        </div>
+    </div>
+</div>
+<div class="section three">
+    <h2>Silky <span class="color">smooth</span></h2>
+    <p>Fast enough to power animations at 60FPS</p>
+    <div class="anim">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script>
+var anim = document.querySelector(".anim");
+var els = anim.querySelectorAll("div");
+function frame() {
+    var animWidth = anim.offsetWidth;
+    var time = performance.now() / 1000;
+    for (var i = 0; i < els.length; ++i) {
+        var progress = i / (els.length-1);
+        var el = els[i];
+        var timeCycle = time % 10 / 10;
+        var timeCycle2 = time % 30 / 30;
+        var timeCycle3 = time % 30 / 30;
+        el.style.backgroundColor = "hsl(" + (((progress + timeCycle) % 1) * 360) + ", 100%, 50%)";
+        el.style.top = 75 + Math.sin(((progress + timeCycle2)%1) * 6 * Math.PI) * 35 + "px";
+        el.style.left = (progress * animWidth - 5) + "px";
+        el.style.transform = "translateY(-50%) rotate(" + ((((progress/10) + timeCycle3) % 1) * 360) + "deg)";
+    }
+    requestAnimationFrame(frame);
+}
+frame();
+    </script>
+    <p>The above animation is 128 <code>&lt;div&gt;</code> tags. No SVG, no CSS transitions/animations. It's all powered by Poop which updates just the right stuff every frame.</p>
+</div>
+</body>
+</html>
